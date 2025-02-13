@@ -6,7 +6,7 @@ import Vector::*;
 import GetPut::*;
 import ClientServer::*;
 
-import Sys_Configs::*;
+import Utils::*;
 
 typedef Server #(Tuple2 #(t, t), t) DotProduct_IFC #(numeric type n_t, type t);
 
