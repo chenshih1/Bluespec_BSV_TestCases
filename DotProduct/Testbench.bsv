@@ -4,7 +4,7 @@ import Vector::*;
 import GetPut::*;
 import ClientServer::*;
 
-import Sys_Configs::*;
+import Utils::*;
 
 import DotProduct::*;
 
