@@ -57,7 +57,7 @@ compile: build_bsim
 .PHONY: link
 link:
 	@echo Linking for Bluesim ...
-	bsc -e $(TOPMODULE) -sim -o $(BSIM_EXE) $(BSIM_DIRS) $(BSC_LINK_FLAGS) $(BSC_PATHS)
+	bsc -e $(TOPMODULE) -sim -o $(BSIM_EXE) $(BSIM_DIRS) $(BSC_LINK_FLAGS) $(BSC_PATHS) $(DISTRO)/C_imports.c
 	@echo Linking for Bluesim finished
 
 .PHONY: simulate
@@ -89,7 +89,7 @@ verilog: build_v verilog_dir
 .PHONY: v_link
 v_link: build_v verilog_dir
 	@echo Linking for Verilog sim ...
-	bsc -e $(TOPMODULE) -verilog -o ./$(VSIM_EXE) $(V_DIRS) -vsim $(VSIM) verilog_dir/$(TOPMODULE).v
+	bsc -e $(TOPMODULE) -verilog -o ./$(VSIM_EXE) $(V_DIRS) -vsim $(VSIM) verilog_dir/$(TOPMODULE).v $(DISTRO)/C_imports.c
 	@echo Linking for Verilog sim finished
 
 .PHONY: v_simulate
